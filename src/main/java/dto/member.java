@@ -1,8 +1,11 @@
 package dto;
 
-import java.util.Date;
-
 public class member {
+	
+	@Override
+	public String toString() {
+		return (mno+mid+mpassword+mname+mphone+memail+maddress+mpoint+mdate);
+	}
 	int mno;
 	String mid;
 	String mpassword;
@@ -11,11 +14,11 @@ public class member {
 	String memail;
 	String maddress;
 	int mpoint;
-	Date mdate;
+	String mdate;
 	public member() {
 	}
 	public member(int mno, String mid, String mpassword, String mname, String mphone, String memail, String maddress,
-			int mpoint, Date mdate) {
+			int mpoint, String mdate) {
 		super();
 		this.mno = mno;
 		this.mid = mid;
@@ -75,10 +78,11 @@ public class member {
 	public void setMpoint(int mpoint) {
 		this.mpoint = mpoint;
 	}
-	public Date getMdate() {
+	public String getMdate() {
 		return mdate;
 	}
-	public void setMdate(Date mdate) {
+	public void setMdate(String mdate) {
 		this.mdate = mdate;
 	}
+
 }
