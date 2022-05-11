@@ -1,8 +1,8 @@
 @charset "UTF-8";
 *{
 	font-family: "돋움";
-	background-image: url("https://previews.123rf.com/images/kittikornphongok/kittikornphongok1505/kittikornphongok150500710/39723034-%EB%8B%A4%EC%B1%84%EB%A1%9C%EC%9A%B4-%EC%88%98%EC%B1%84%ED%99%94-%EA%B7%B8%EB%9F%B0-%EC%A7%80-%EC%A7%88%EA%B0%90-%EB%B0%B0%EA%B2%BD%EC%9E%85%EB%8B%88%EB%8B%A4-%EC%86%8C%ED%94%84%ED%8A%B8-%EB%B0%B0%EA%B2%BD-.jpg");
-}
+	background-image: url("https://postfiles.pstatic.net/20130601_240/tidley_1370021816109vjYyL_JPEG/polygon_art-wallpaper-1920x1080.jpg?type=w1");
+	}
 a{text-decoration: none; color:black;}
 .header{background-color: aqua;}
 h3{text-align:center; color:black;}
@@ -105,3 +105,29 @@ h3{text-align:center; color:black;}
 /*
 .card{border: none;height: 320px}.forms-inputs{position: relative}.forms-inputs span{position: absolute;top:-18px;left: 10px;background-color: #fff;padding: 5px 10px;font-size: 15px}.forms-inputs input{height: 50px;border: 2px solid #eee}.forms-inputs input:focus{box-shadow: none;outline: none;border: 2px solid #000}.btn{height: 50px}.success-data{display: flex;flex-direction: column}.bxs-badge-check{font-size: 90px}
 */
+.boardview_title{border-bottom:2px solid black; padding:10px;}
+.boardview_content{
+	min-height: 400px; /* 최소높이 */
+}
+textarea{resize:none;}
+.replywriter{font-size:10px;}
+.replybtn{font-size:8px;}
+.header_topmenu{
+	font-size:13px;
+	color:black;
+	padding:2px;
+}
+.header_input{
+	border: 0;
+	border-bottom:1px solid black;
+}
+.shoppingbox{
+	font-size:10px;
+	background-color:blue;
+	color:white;
+	padding:2px 5px 2px 5px;
+	border-radius:20px;
+}
+.dropdown:hover .dropdown-menu{
+	display:block;
+}

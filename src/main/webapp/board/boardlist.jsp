@@ -38,7 +38,9 @@
 					%>
 					<tr>
 						<td><%=board.getBno() %></td>
-						<td><a href="boardview.jsp?bno=<%=board.getBno()%>"><%=board.getBtitle() %></a></td>
+						<td><a href="boardview.jsp?bno=<%=board.getBno()%>"><%=board.getBtitle()%></a>
+						[<%=boardDao.getboarddao().replyview(board.getBno()) %>]
+						</td>
 						<td><%=memberdao.getmemberDao().getmid(board.getMno()) %></td>
 						<td><%=board.getBview() %></td>
 						<%

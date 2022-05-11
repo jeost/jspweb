@@ -16,8 +16,8 @@ public class Board {
 	public Board(int bno, String btitle, String bcontent, int mno, String bfile, int bview, String bdate, String mid) {
 		super();
 		this.bno = bno;
-		this.btitle = btitle;
-		this.bcontent = bcontent;
+		this.btitle = btitle.replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\S)*(/)?","");
+		this.bcontent = bcontent.replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\S)*(/)?","");
 		this.mno = mno;
 		this.bfile = bfile;
 		this.bview = bview;
