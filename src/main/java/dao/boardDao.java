@@ -24,9 +24,14 @@ public class boardDao extends Dao{
 		}catch(Exception e) {e.printStackTrace();}
 		return false;}
 	//모든 게시물 출력 메소드
-	public ArrayList<Board> getboardlist() {
+	public ArrayList<Board> getboardlist(int startrow, int listsize, String key, String keyword) {
 		ArrayList<Board> boardlist = new ArrayList<Board>();
-		String sql="select*from board order by bno desc";
+		String sql=null;
+		if(key.equals("")&&keyword.equals("")) {
+			sql="select*from board order by bno desc limit "+startrow+","+listsize;
+		}else {
+			sql="select*from board where '"+key+"' like '%"+keyword+"%' order by bno desc limit "+startrow+","+listsize;
+		}
 		try {
 			ps=con.prepareStatement(sql);
 			rs=ps.executeQuery();
@@ -37,6 +42,19 @@ public class boardDao extends Dao{
 			}return boardlist;
 		}catch(Exception e) {e.printStackTrace();}
 		return null;}
+	//게시물 전체 개수 출력 메소드
+	public int gettotalrow(String key, String keyword) {
+		String sql=null;
+		if(key.equals("")&&keyword.equals("")) {
+		sql="select count(*) from board";
+		}else {
+			sql="select count(*) from board where '"+key+"' like '%"+keyword+"%'";
+		}
+		try {
+			ps=con.prepareStatement(sql); rs=ps.executeQuery();
+			if(rs.next()) return rs.getInt(1);
+		}catch(Exception e) {e.printStackTrace();} return 0;
+	}
 	//개별 게시물 출력 메소드
 	public Board getboard(int bno) {
 		String sql="select*from board where bno='"+bno+"'";
@@ -165,4 +183,3 @@ public class boardDao extends Dao{
 		return null;
 	}
 }
-

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.admin_title{
+	margin:70px;
+	padding:10px;
+	text-align:center;
+	border-bottom:2px orange;
+}

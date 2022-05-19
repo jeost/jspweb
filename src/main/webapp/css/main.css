@@ -131,3 +131,35 @@ textarea{resize:none;}
 .dropdown:hover .dropdown-menu{
 	display:block;
 }
+.boardlist_title{
+	width:20%;
+	border-bottom:1px solid black;
+	padding:20px;
+	margin:100px 0px 50px 0px;
+}
+.boardlist_topbtn{
+	margin:20px;
+	padding:20px;
+}
+.pagenum{
+	color: black;
+	font-size: 12px;
+}
+.adbox{
+	margin:50px 10px 50px 0px;
+}
+.main_title{
+	text-align:center;
+}
+.bext_box{
+	width:100%;
+}
+.main_box{
+	margin-bottom:50px;
+}
+.p_discount{
+	text-decoration:line-through;
+}
+.p_item{
+	margin:10px;
+}

@@ -15,7 +15,7 @@
 	<%@include file="../header.jsp" %>
 	
 	<%
-		ArrayList<Board> boardlist=boardDao.getboarddao().getboardlist();
+		ArrayList<Board> boardlist=boardDao.getboarddao().getboardlist(0,10,"","");
 		Date date;
 		SimpleDateFormat sdf;
 		Calendar ca;
